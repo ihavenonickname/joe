@@ -1,0 +1,99 @@
+<style>
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;;
+}
+
+#cabeca {
+  display: block;
+  width: 180px;
+  height: 200px;
+  border-radius: 50%;
+  border: solid 1px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.olho {
+  display: float;
+  width: 20px;
+  height: 15px;
+  border-radius: 50%;
+  border: solid 1px;
+}
+
+#olho-esq {
+  margin-top: 50px;
+  margin-left: 40px;
+  
+  animation-name: piscar-olho-esq;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+#olho-dir {
+  margin-left: 120px;
+  margin-top: -15px;
+  
+  animation-name: piscar-olho-dir;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+#boca {
+  border: solid 1px;
+  width: 120px;
+  height: 55px;
+  border-radius: 50%;
+  margin-left: 25px;
+  margin-top: 20px;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+@keyframes piscar-olho-esq {
+  0% {
+    margin-top: 50px;
+    height: 15px;
+  }
+  3% {
+    height: 1px;
+    margin-top: 64px;
+  }
+  8% {
+    margin-top: 50px;
+    height: 15px;
+  }
+}
+
+@keyframes piscar-olho-dir {
+  0% {
+    margin-left: 120px;
+    margin-top: -15px;
+    height: 15px;
+  }
+  3% {
+    margin-left: 120px;
+    margin-top: -1px;
+    height: 1px;
+  }
+  8% {
+    margin-left: 120px;
+    margin-top: -15px;
+    height: 15px;
+  }
+}
+</style>
+
+<div id="cabeca">
+  <div id="olho-esq" class="olho"></div>
+  <div id="olho-dir" class="olho"></div>
+  <div id="boca"></div>
+</div>
